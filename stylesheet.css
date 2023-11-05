@@ -42,22 +42,46 @@ table {
  border-spacing: 0;
 }
 
+@font-face {
+    font-family: EduTasFont;
+    src: url(./Fonts/EduTasFont.ttf);
+}
+
 :root{
     height: 100vh;
     background-image: url("./Images/form-practice-background-image.jpg");
-    background-position: center center;
+    background-position: center top;
     background-repeat: repeat;
-    background-size: cover;
-
+    background-size: 110%,110%;
+    --custom-font-family: EduTasFont, Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--custom-font-family);
 }
+
+/* #parallax{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(./Images/form-practice-background-image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: 50% 50%;
+} */
+/* h1{
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+} */
+
+
+
+
+
 input{
     border: none;
     outline: none;
     font-size: 14px;
 }
-
-
-
 
 @media screen and (min-width: 900px) {
 
@@ -65,6 +89,7 @@ input{
         padding-left: 35%;
         padding-right: 35%;
         --border-color: rgb(121, 74, 69);
+        --btn-color: #cf8674;
     }
     #header-container{
         display: flex;
@@ -93,18 +118,116 @@ input{
         flex-direction: column;
     }
     fieldset>*{
-        margin: 0.5rem 0;
+        margin: 0.7rem 0;
     }
     #form-container{
         min-height: 65vh;
         margin-top: 5rem;
         background-color: white;
         border: 2px solid var(--border-color);
-        padding: 3rem;
+        padding: 3rem 4rem;
+        box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.36);
+        -webkit-box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.36);
+        -moz-box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.36);
     }
     input{
         border-bottom: 1px solid var(--border-color);
     }
+    #sign-in-container, #term-fieldset{
+        display: flex;
+        flex-direction: row;
+    }
+    #tearms-cb{
+        
+        margin-right: 1rem;
+    }
+    input[type=checkbox] {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #fff;
 
+        font: inherit;
+        color: var(--btn-color);
+        width: 1.15em;
+        height: 1.15em;
+        border: 0.15em solid var(--border-color);
+        border-radius: 0.15em;
+        transform: translateY(-0.075em);
+        accent-color: var(--btn-color);
+        border: 1px solid var(--border-color);
+        place-content: center;
+        display: grid;
+    } 
+    input[type=checkbox]::before{
+        content: "";
+        width: 0.65em;
+        height: 0.65em;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em var(--btn-color);
+        transform-origin: center;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    } 
+    input[type=checkbox]:checked::before{
+        transform: scale(1.2);
+    }
+    #btn-submit {
+        align-self: center;
+        align-items: center;
+        border-radius: 30px;
+        padding: 1rem 2rem;
+        min-width: 75%;
+        margin: 1rem;
+        background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97  51%, #DD5E89  100%);
+        margin: 10px;
+        transition: 0.3s;
+        background-size: 200% auto;
+        color: white;  
+        border: none;          
+        box-shadow: 0 0 20px #eee;
+        border-radius: 30px;
+        display: block;
+      }
+
+      #btn-submit:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+      }
+
+      #btn-submit:focus{
+        background-color: var(--btn-color);
+        animation: 0.3s linear btn-submit;
+      }
+
+      button#btn-sign-in{
+        border: none;
+        font-family: var(--custom-font-family);
+        font-size: 16px;
+        background: none;
+        color: var(--border-color);
+        margin: 0;
+        margin-left: 0.2em;
+        padding: 0;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 600;
+      }
+      #sign-in-text{
+        justify-content: center;
+      }
+
+      @keyframes btn-submit {
+        from{
+            transform: scale(1);
+        }
+        to{
+            transform: scale(0.95);
+        }
+      }
+      
+    
+     
 
 }

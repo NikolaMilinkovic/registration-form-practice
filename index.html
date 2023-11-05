@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mockup form</title>
     <link rel="stylesheet" href="./stylesheet.css">
-    <link rel="javascript" href="./javascript.js">
+    <script src="./javascript.js" defer></script>
+
 </head>
 <body>
     <div id="main-container">
@@ -23,15 +24,15 @@
                     <input type="text" id="phone" placeholder="Phone number">
                     <input type="text" id="password" placeholder="Password">
                 </fieldset>
-                <fieldset>
-                    <input type="checkbox" name="tearms" id="tearms">
-                    <label for="tearms">I accept tearms & conditions</label>
+                <fieldset id="term-fieldset">
+                    <input type="checkbox" name="tearms" id="tearms-cb">
+                    <label for="tearms-cb">I accept tearms & conditions</label>
                 </fieldset>
-                <button type="submit">Create Account</button>
+                <button type="submit" id="btn-submit">Create Account</button>
             </form>
-            <div class="sign-in-container">
-                <p>Already have an account?</p>
-                <button>Sign in</button>
+            <div id="sign-in-container">
+                <p id="sign-in-text">Already have an account?</p>
+                <button id="btn-sign-in">Sign in</button>
             </div>
         </div>
     </div>
