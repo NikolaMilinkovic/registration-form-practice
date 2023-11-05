@@ -190,7 +190,6 @@ input{
 
       #btn-submit:focus{
         background-color: var(--btn-color);
-        animation: 0.3s linear btn-submit;
       }
 
       button#btn-sign-in{

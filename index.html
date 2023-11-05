@@ -18,14 +18,14 @@
                         <h1 id="h1-header">Registration Form</h1>
                         <p if="p-right">.</p>
                     </div>
-                    <input type="text" id="name" placeholder="Name">
-                    <input type="text" id="email" placeholder="E-mail">
-                    <input type="text" id="country" placeholder="Country">
-                    <input type="text" id="phone" placeholder="Phone number">
-                    <input type="text" id="password" placeholder="Password">
+                    <input type="text" id="name" placeholder="* Name" required>
+                    <input type="email" id="email" placeholder="* E-mail" required>
+                    <input type="text" id="country" placeholder="* Country" required>
+                    <input type="text" id="phone" placeholder="* Phone number" required>
+                    <input type="password" id="password" placeholder="* Password" required>
                 </fieldset>
                 <fieldset id="term-fieldset">
-                    <input type="checkbox" name="tearms" id="tearms-cb">
+                    <input type="checkbox" name="tearms" id="tearms-cb" required>
                     <label for="tearms-cb">I accept tearms & conditions</label>
                 </fieldset>
                 <button type="submit" id="btn-submit">Create Account</button>
