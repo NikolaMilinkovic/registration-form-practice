@@ -7,7 +7,7 @@
         let h = window.innerHeight / 2;
         let mouseX = e.clientX;
         let mouseY = e.clientY;
-        let depth = `${10-(mouseX-4)*0.003}% ${10-(mouseY-4)*0.003}%`;
+        let depth = `${20-(mouseX-4)*0.002}% ${20-(mouseY-2)*0.002}%`;
         let x= `${depth}`;
         elem.style.backgroundPosition = x;
     }
