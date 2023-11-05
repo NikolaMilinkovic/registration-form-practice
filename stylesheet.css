@@ -125,7 +125,7 @@ input{
         margin-right: 1rem;
     }
     input[type=checkbox]:hover, label[for=tearms-cb]:hover{
-        cursor: grab;
+        cursor: pointer;
     }
     input[type=checkbox] {
         -webkit-appearance: none;
@@ -183,7 +183,7 @@ input{
         background-position: right center; /* change the direction of the change here */
         color: #fff;
         text-decoration: none;
-        cursor: grab;
+        cursor: pointer;
       }
 
       #btn-submit:focus{
