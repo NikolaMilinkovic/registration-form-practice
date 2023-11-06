@@ -379,7 +379,7 @@ input{
     }
 
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 1300px) {
 
         :root{
             padding-left: 35%;
